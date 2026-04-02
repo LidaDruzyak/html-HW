@@ -2,13 +2,36 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+}
+
+image {
+  display: block;
 }
 
 a {
   text-decoration: none;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 h2 {
   font-weight: 600;
   font-size: 24px;
@@ -38,16 +61,50 @@ h3 {
   overflow: hidden;
 }
 
+.container {
+  width: 1166px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.header {
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
   color: #111;
+  display: flex;
+  align-items: center;
+  padding-top: 26px;
+  padding-bottom: 34px;
 }
 
 .header-logo-span {
   font-style: italic;
+  /* padding-top: 26px;
+  padding-bottom: 34px; */
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-right: 90px;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 24px;
 }
 
 .header-menu-link {
@@ -56,6 +113,8 @@ h3 {
   line-height: 1.14286;
   letter-spacing: -0.02em;
   color: #111;
+  padding-top: 28px;
+  padding-bottom: 36px;
 }
 
 .header-menu-link:hover,
@@ -64,23 +123,68 @@ h3 {
   color: #fd9222;
 }
 
+.header-social-list {
+  display: flex;
+  gap: 14px;
+}
+
+.header-social-icon {
+  fill: transparent;
+  stroke: #111;
+}
+
+.header-social-link {
+  /* padding-top: 24px;
+  padding-bottom: 32px; */
+}
+
 .hero {
+  padding-bottom: 80px;
+}
+
+.hero-container {
   background-color: rgba(17, 17, 17, 0.6);
+  border-radius: 30px;
+  padding: 380px 40px 40px;
+  background-image: url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #fff;
+  max-width: 484px;
 }
 
 .hero-btn {
+  background-color: #fd9222;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border-radius: 100px;
+  border: none;
+  padding: 14px 40px;
+  margin-right: 14px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
 }
 
 .hero-made-link {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border: 1px solid #fff;
+  padding: 14px 40px;
+  border-radius: 100px;
+  background-color: transparent;
 }
 
 .hero-scroll-link {
@@ -89,6 +193,7 @@ h3 {
   line-height: 1.28;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: auto;
 }
 
 .hero-btn:hover,
@@ -106,10 +211,22 @@ h3 {
 
 .benefits {
   background-color: #1e1823;
+  padding: 50px 50px;
 }
 
 .benefits-subtitle {
   color: #fff;
+  margin-bottom: 18px;
+}
+
+.benefits-list {
+  display: flex;
+  padding: 0 18px;
+  gap: 88px;
+}
+
+.benefits-item {
+  width: calc((100% - 2 * 88px) / 3);
 }
 
 .benefits-text {
@@ -120,13 +237,24 @@ h3 {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.taste {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .taste-title {
+  margin-bottom: 50px;
 }
 
 .title-colored {
   color: #fd9222;
 }
 
+.taste-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .taste-text {
   font-weight: 400;
   font-size: 14px;
@@ -138,6 +266,7 @@ h3 {
 
 .taste-subtitle {
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 .made {
@@ -168,35 +297,59 @@ h3 {
 }
 
 .products {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .products-title {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
 }
 
 .products-item {
+  box-sizing: border-box;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  background-color: #fff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+  /* width: calc((100% - 54px) / 4); */
 }
 
 .products-image {
+  margin: 0 auto;
+  margin-bottom: 8px;
 }
 
 .products-subtitle {
+  text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
 .products-text {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: -0.02em;
   color: rgba(17, 17, 17, 0.7);
+  margin-bottom: 18px;
 }
 
 .products-btn {
   font-weight: 600;
   font-size: 14px;
   color: #111;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+  padding: 8px 20px;
+  background-color: #fafafa;
 }
 
 .products-btn:hover,
@@ -207,39 +360,83 @@ h3 {
 }
 
 .sellers {
+  padding-bottom: 120px;
 }
 
 .sellers-title {
+  margin-bottom: 50px;
 }
 
 .sellers-list {
+  display: flex;
+  gap: 16px;
 }
 
 .sellers-item {
+  width: calc((100% - 2 * 16px) / 3);
 }
 
-.sellers-image {
+.sellers-cover-text {
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
-.sellers-text {
+.sellers-item:hover .sellers-cover-text {
+  transform: translateY(0);
+}
+
+.sellers-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.sellers-subtitle {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #111;
+  padding: 28px 0;
+  text-align: center;
+  border: 1px solid #111;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
 }
 
 .reviews {
 }
 
 .reviews-title {
+  margin-bottom: 50px;
 }
 
 .reviews-list {
+  display: flex;
+  gap: 28px;
+  align-items: center;
 }
 
 .reviews-item {
+  width: calc((100% - 2 * 28px) / 3);
 }
 
 .reviews-image {
@@ -255,12 +452,19 @@ h3 {
   letter-spacing: -0.02em;
   text-align: center;
   color: rgba(17, 17, 17, 0.7);
+  margin-bottom: 99px;
 }
 
 .reviews-btn {
   font-weight: 600;
   font-size: 18px;
   color: #111;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  padding: 20px 40px;
+  margin: 0 auto;
+  display: block;
+  align-items: center;
 }
 
 .reviews-btn:hover,
@@ -297,6 +501,11 @@ h3 {
 }
 
 .footer-social-link {
+}
+
+.footer-social-icon {
+  fill: transparent;
+  stroke: #fff;
 }
 
 .footer-social-link:hover,
